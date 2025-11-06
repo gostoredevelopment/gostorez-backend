@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: Campus GOSTOREz API (MVP)
+  version: "0.1"
+paths:
+  /auth/signup:
+    post:
+      summary: User signup
+      responses:
+        "201": {description: Created}
+  /auth/login:
+    post:
+      summary: User login
+      responses:
+        "200": {description: OK}
+  /products:
+    get:
+      summary: List products
+      responses:
+        "200": {description: OK}
+    post:
+      summary: Create product
+      responses:
+        "201": {description: Created}
+  /orders:
+    post:
+      summary: Create order
+      responses:
+        "201": {description: Created}
+  /webhooks/payments:
+    post:
+      summary: Payment webhook
+      responses:
+        "200": {description: OK}
