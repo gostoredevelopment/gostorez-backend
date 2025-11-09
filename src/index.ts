@@ -1,5 +1,6 @@
 import express from 'express';
 import testSupabaseRoute from './routes/test-supabase';
+import paymentsRoute from './routes/payments';
 
 
 const app = express();
@@ -10,6 +11,9 @@ app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 
 // Supabase health check route
 app.use('/api', testSupabaseRoute);
+
+// payment route sandbox
+app.use('/api', paymentsRoute);
 
 // Add a root route to fix "Cannot GET /"
 app.get('/', (_req, res) => res.send('GoStore Backend API is running!'));
